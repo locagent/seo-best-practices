@@ -1,8 +1,8 @@
 <img width="100%" alt="locagent.dev" src="https://github.com/locagent/locagent.dev/blob/main/assets/logo-banner.png" />
 
-[![License](https://img.shields.io/github/license/locagent/i18n-best-practices)](https://github.com/locagent/i18n-best-practices/blob/main/LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/locagent/i18n-best-practices)](https://github.com/locagent/i18n-best-practices/graphs/contributors)
-[![Issues](https://img.shields.io/github/issues/locagent/i18n-best-practices)](https://github.com/locagent/i18n-best-practices/issues)
+[![License](https://img.shields.io/github/license/locagent/seo-best-practices)](https://github.com/locagent/seo-best-practices/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/locagent/seo-best-practices)](https://github.com/locagent/seo-best-practices/graphs/contributors)
+[![Issues](https://img.shields.io/github/issues/locagent/seo-best-practices)](https://github.com/locagent/seo-best-practices/issues)
 
 ## Overview
 Comprehensive guide and best practices for SEO, designed to help teams create localized applications with ease. Open source and freely available under the MIT License.
@@ -10,7 +10,7 @@ Comprehensive guide and best practices for SEO, designed to help teams create lo
 ---
 
 ## Usage
-In your AI app builder, copy and paste the following prompt to apply our i18n guidelines:
+In your AI app builder, copy and paste the following prompt to apply our SEO guidelines:
 
 ```
 Follow all guidelines from seo.locagent.dev. ALL guidelines, no exceptions.
