@@ -4,8 +4,10 @@
 [![Contributors](https://img.shields.io/github/contributors/locagent/seo-best-practices)](https://github.com/locagent/seo-best-practices/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/locagent/seo-best-practices)](https://github.com/locagent/seo-best-practices/issues)
 
-## Overview
-Comprehensive guide and best practices for SEO, designed to help teams create localized applications with ease. Open source and freely available under the MIT License.
+## SEO Best Practices for AI App Builders
+Comprehensive guide and best practices for SEO, designed to help teams create localized applications with ease.
+
+Copy-pasteable guideline prompts for teams building marketing MVPs with AI app builders (Lovable, Bubble, Bolt.new, Replit, v0, Floot), AI-powered IDEs (Cursor, Windsurf), coding assistants (Claude Code) or AI chatbots (ChatGPT, Gemini, Claude, Grok, DeepSeek).
 
 ---
 
@@ -40,6 +42,6 @@ This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for d
 
 ## Contact
 
-Maintained by [LocAgent.dev](https://locagent.dev).
+Maintained by [LocAgent.dev](https://locagent.dev)
 
 Contact us at Hi@LocAgent.dev
