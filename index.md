@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Building Global Apps - An Internationalization (i18n) Guide"
-description: "Best practices for building internationalization (i18n) web apps by Lovable, Bubble, Bolt, Replit, v0, Floot, Cursor, Windsurf, Claude Code AI app builders."
+title: "Building Global Apps - An SEO Guide"
+description: "SEO best practices for vibe coding MVPs built with Lovable, Bubble, Bolt, Replit, v0, Floot, Cursor, Windsurf, Claude Code, etc. AI app builders."
 ---
 
-# 🌐 Building Global AI Apps: An Internationalization (i18n) Guide
+# Building Global AI Apps: An SEO Guide
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Infrastructure](#infrastructure)
 2. [Best Practices](#best-practices)
@@ -17,78 +17,77 @@ description: "Best practices for building internationalization (i18n) web apps b
 
 ## Infrastructure
 
-### 1. i18n Setup
-- Check if an i18n framework is already integrated. If not, add i18n capabilities by integrating i18next.
+### 1. Head Tags
+- Every indexable page needs a unique, descriptive `<title>` and a helpful meta description.
 
-### 2. String Files Structure
-- Manage each language in a single string file `/public/locales/{language}/translation.json`
+### 2. Robots Rules
+- Use `robots.txt` only to manage crawling pressure. Don’t use it to keep pages out of search engines (use `noindex` or authentication). Place robots at the site root.
 
 ### 3. Sitemap
-- Maintain a sitemap with the domain and routing to support separate language URLs, such as `/{language}/{page}`. For example: `/en/about`, `/es/about`, `/ar/about`, `/fr/about`
+- Maintain a sitemap with the domain.
 
-### 4. Pre-rendering Translation Check
-- Translations must be loaded and ready before the first rendering.
+### 4. URL Structure
+- Keep URLs simple, readable, and stable. Avoid duplicate parameter variants. Prefer one canonical URL per page.
 
-### 5. Language Selector
-- A dropdown language selector with: Display languages in their native names, avoid using flags as language indicators, disable the currently active language, update URL and user preferences on change and navigate other pages.
+### 5. Sitemaps
+- Provide an XML sitemap listing canonical URLs, link it in robots.txt.
 
+### 6. Structured Data
+- Add JSON-LD structured data using Schema.org to enhance understanding and eligibility for rich results.
+
+### 7. Errors
+- Ship a helpful `/404.html`.
+
+### 8. Internal Linking & Media
+- Use clear internal links (real `<a href>`), sensible anchor text, and `alt` text for images. Avoid blocking required JS/CSS for rendering.
 
 ## Best Practices
 
-### 1. Avoid String Concatenation
-- **Bad:** `"Hello " + userName`.
-- **Good:** Keep sentences intact and use placeholders: `t('greeting', { name: userName })`.
+### 1. Titles & Descriptions
+- One unique `<title>` per page, avoid boilerplate and keyword stuffing. Make the main visual title consistent.
+- Provide a concise meta description that truly summarizes the page.
 
-### 2. Pluralization and Count Handling
-- Provide `_one`, `_other` (and language‑specific `_zero`, `_two`, `_few`, `_many`) keys.
-- Pass `count` into your translation call: `t('item', { count })`.
+### 2. Canonical, Sitemap & Indexing
+- Add a self-referential `<link rel="canonical">` on canonical pages.
+- Keep sitemap URLs canonical, update on deploy.
+- Keep `robots.txt` at root, allow essential resources. Don’t accidentally disallow JS/CSS needed for rendering.
 
-### 3. Locale‑Specific Formatting
-- Use Intl-based formatting (dates, numbers, currency) via placeholders: `{{ value, date }}`, `{{ value, number }}`.
-- Rely on the user’s locale settings to format correctly (e.g., `31/12/2025` vs. `12/31/2025`).
+### 3. Structured Data
+- Use JSON-LD that matches on-page content.
+- Don’t add markup for content that isn’t present.
 
-### 4. Fallback Languages
-- Auto‑detect user locale, but allow manual override via a language switcher.
-- Always configure a real fallback language (e.g., English) so missing keys never display raw identifiers.
-
-### 5. Right‑to‑Left (RTL) Language Support
-- For proper RTL layout, ensure your CSS applies `direction: rtl;` when the page’s language attribute is one of the following languages: ks, yi, uz, he, fa, sd, lrc, ckb, ar, ur, ug, mzn, ps.
-
-### 6. Placeholder Naming
-- Use consistent, descriptive placeholder names (e.g., `{{userName}}` rather than `{{x}}`).
-
-### 7. ICU Message Format
-- Adopt ICU syntax when needing complex logic (select, plurals) in a single string.
-
-### 8. Encoding
-- Always serve content in UTF‑8.
-
-### 9. Language Selector
-- Don’t include a flag in the language selector, because a flag represent a region but not a language
+### 4. Social Preview
+- Keep social previews (e.g. OG/Twitter tags) consistent with the SEO title and description.
 
 ---
 
 ## Code Review
 
-Only fix i18n-related code, do not change anything else.
+Only fix SEO-related code, do not change anything else.
 
-### 1. Hard‑coded Strings
-- Scan the project for any hard‑coded UI strings not passed through your i18n function.
+### 1. Indexability & Rendering
+- Scan the meaningful content from the initial HTML, ensuring avoid any blocked resources.
 
-### 2. Pluralization Check
-- Identify manual plural logic and suggest replacing with library plural forms (`_one`, `_other`).
+### 2. Titles & Descriptions
+- Ensure each page has exactly one unique <title> tag. Confirm meta description is present.
 
-### 3. Formatting Audit
-- Review number, date, and currency formatting. Are locale‑aware formats used?
+### 3. Canonical & Robots
+- Self-canonical on canonical pages. `robots.txt` doesn’t block critical pages/resources.
 
-### 4. RTL Verification
-- Detect pages displaying in LTR when the language attribute is set to an RTL language. Ensure CSS `direction: rtl` is applied.
+### 4. Sitemap
+- XML sitemap exists, lists canonical URLs, referenced in `robots.txt`.
 
-### 5. Placeholder Consistency Check
-- Verify that placeholder names in translation strings match those used in code, and flag any mismatches.
+### 5. Structured Data
+- JSON-LD present where applicable and consistent with visible content. Validate types and required properties.
 
-### 6. Missing Translation Keys
-- Scan for missing translation keys in resource files and suggest adding them to the appropriate locale files.
+### 6. Headings & Content
+- Logical H1/H2 hierarchy. Main topic clear, important copy not hidden behind tabs/JS.
+
+### 7. Internal Links & Media
+- Crawlable `<a href>` links. Descriptive anchor text that images have meaningful `alt`.
+
+### 8. Page 404
+- Functional `/404.html`.
 
 ---
 
